@@ -1,0 +1,104 @@
+\documentclass{article}
+
+% Encodings, page setup, paragraph formatting, font
+\usepackage[top=0.9in, bottom=1in, left=1.5in, right=1.5in]{geometry}
+\usepackage[icelandic]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[sc]{mathpazo}
+\usepackage[parfill]{parskip}
+\usepackage{cancel}
+% Tables and lists
+\usepackage{booktabs,tabularx}
+\usepackage{multirow}
+\usepackage{enumerate}
+\usepackage{adjustbox}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage{xcolor}
+% Math
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+% Graphics
+\usepackage{graphicx}
+\usepackage{forest}
+\usepackage{tikz}
+\usetikzlibrary{positioning, shapes, arrows.meta}
+
+
+\usepackage{listingsutf8}
+\definecolor{commentcolor}{RGB}{255, 0, 255} % Bleikur
+\definecolor{keywordcolor}{RGB}{139, 69, 19}   % Brúnn
+\definecolor{stringcolor}{RGB}{0, 0, 255}      % Blár
+\definecolor{numbercolor}{RGB}{0, 128, 0}      % Grænn
+\definecolor{identifiercolor}{RGB}{0, 0, 255}
+%Morpho
+\lstdefinelanguage{CustomLang}{
+    alsoletter={=},
+    keywords={rec, fun, if, else, return},
+    sensitive=true,
+    comment=[l]{;;;},
+    commentstyle=\color{commentcolor},
+    morestring=[b]",
+    stringstyle=\color{stringcolor},
+}
+
+\lstset{
+    language=CustomLang,
+    basicstyle=\ttfamily,
+    keywordstyle=\color{keywordcolor},
+    commentstyle=\color{commentcolor},
+    identifierstyle=\color{identifiercolor},
+    stringstyle=\color{stringcolor},   
+    showstringspaces=false,
+    numbers=none,
+    tabsize=2,
+    breaklines=true,
+    columns=fullflexible,
+    keepspaces=true,
+    inputencoding=utf8, 
+    extendedchars=true,  
+    literate=
+        {á}{{\'a}}1
+        {ð}{{\dh}}1
+        {é}{{\'e}}1
+        {í}{{\'i}}1
+        {ó}{{\'o}}1
+        {ú}{{\'u}}1
+        {ý}{{\'y}}1
+        {þ}{{\th}}1
+        {æ}{{\ae}}1
+        {ö}{{\"o}}1
+        {Á}{{\'A}}1
+        {Ð}{{\DH}}1
+        {É}{{\'E}}1
+        {Í}{{\'I}}1
+        {Ó}{{\'O}}1
+        {Ú}{{\'U}}1
+        {Ý}{{\'Y}}1
+        {Þ}{{\TH}}1
+        {Æ}{{\AE}}1
+        {Ö}{{\"O}}1,
+}
+
+
+% Hyphenation
+\hyphenpenalty=5000
+% Page and section numbering
+\setcounter{secnumdepth}{-1} 
+\pagenumbering{gobble}
+\title{Forritunarmál}
+\author{--Nemandi--}
+\date{--Dagsetning--}
+
+\begin{document}
+
+\maketitle
+
+\begin{lstlisting}
+;;; Notkun:
+;;; Fyrir:
+;;;
+;;; Gildi:
+writeln("Hello world");  
+\end{lstlisting}
+
+\end{document}
